@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="The trusted community" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('https://th.bing.com/th/id/R.0888bfe969b2c937437cedf239167072?rik=zaiszxHAx9C20w&riu=http%3a%2f%2fi.imgur.com%2fj19Gqdg.jpg&ehk=p27PsxHV3V5Rm4QGamXAs1bvoOlwo4M2XAzCUo6BO2g%3d&risl=1&pid=ImgRaw&r=0'); /* Replace with the image path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        #myVideo {
+         width: 810px;
+        height: 400px;
+        }
+    </style>
+    <title>lnwingsclub</title>
+</head>
+
+<body>
+    <div class="topbar">
+        <span><ion-icon name="call-outline"></ion-icon> +254703625235</span>
+        <ul>
+            <li>
+                <a href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <header>
+        <nav>
+             <div class="toggle">
+                <a href="#">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </a>
+            </div>
+            <div class="logo">
+                <img src="images/logo1.jpeg" class="logo">
+            </div>
+           
+
+            <ul class="menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="aboutus.html">About Us</a></i>
+                    <li><a href="prog.html">Amenities</a></li>
+                    
+                    <li><a href="gallery.htm">Gallery</a></li>
+                  <li><a href="Menu.html">Our Meals</a></li>
+                     <li><a href="Restaurant.html">Accomodation</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <script src="C:\Users\Taardy Blaque\Desktop\LNW Web\html project\js"></script>
+    <script>
+        $(document).ready(function() {
+            $(function() {
+                $(".toggle a").on("click", function(e) {
+                    e.preventDefault(); // Prevent the default behavior of the anchor link
+
+                    if ($(".menu").hasClass("active")) {
+                        $(".menu").removeClass("active");
+                        $(this).html("<ion-icon name='menu-outline'></ion-icon>");
+                    } else {
+                        $(".menu").addClass("active");
+                        $(this).html("<ion-icon name='close-outline'></ion-icon>");
+                    }
+                });
+            });
+        });
+    </script>
+
+
+    <section class="slide_container">
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img src="images/logo1.jpeg" id="slide-1">
+
+                <img src="images/room1.jpg" id="slide-2">
+                <img src="images/bathroom.jpg" id="slide-3">
+                <img src="images/pool2.jpg" id="slide-4">
+                <img src="images/pool3.jpg" id="slide-5">
+                <img src="images/h6.jpeg" alt="" id="slide-6">
+                <img src="images/pool2.jpg" id="slide-7">
+                <img src="images/gym.jpeg" id="slide-8">
+                <img src="images/bathroom.jpg" id="slide-9">
+                <img src="images/room1.jpg" id="slide-10">
+            </div>
+            <div class="slider-nav">
+                <a href="#slide-1"></a>
+                <a href="#slide-2"></a>
+                <a href="#slide-3"></a>
+                <a href="#slide-4"></a>
+                <a href="#slide-5"></a>
+                <a href="#slide-6"></a>
+                <a href="#slide-7"></a>
+                <a href="#slide-8"></a>
+                <a href="#slide-9"></a>
+                <a href="#slide-10"></a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    let currentSlide = 1;
+const totalSlides = 10; // Update this number to match the total number of slides
+
+function showSlide(n) {
+    const slides = document.querySelectorAll('.slider img');
+    const navButtons = document.querySelectorAll('.slider-nav a');
+
+    if (n > totalSlides) {
+        currentSlide = 1;
+    } else if (n < 1) {
+        currentSlide = totalSlides;
+    }
+
+    slides.forEach(slide => {
+        slide.style.display = 'none';
+    });
+
+    navButtons.forEach(button => {
+        button.classList.remove('active');
+    });
+
+    slides[currentSlide - 1].style.display = 'block';
+    navButtons[currentSlide - 1].classList.add('active');
+
+    currentSlide++;
+    setTimeout(() => {
+        showSlide(currentSlide);
+    }, 3000); // Change 3000 to set the time interval for slide transition (in milliseconds)
+}
+
+showSlide(currentSlide);
+</script>
+
+    
+
+
+    <div class="purpose">
+        <div class="background">
+            <div class="content__purpose">
+                <h2>LN Wings Club</h2>
+                <p>The best you'll ever find from within</p>
+
+               <video id="myVideo" autoplay muted loop>
+  <source src="movies/m1.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+            </div>
+        </div>
+    </div>
+     <div class="text-area" id="about_us">
+           
+          <center>
+            <h2>About us </h2>
+         
+            <p>Situated in the heart of Maseno, the extensive ground of LN Wings Club contains a fitness centre and spa................</p>
+            <button class="aboutus.html"><a href="aboutus.html">VIEW MORE</a></button>
+              </center> 
+        </div>
+    <!--<div class="purpose">
+        <div class="purpose__container">
+            <h1 class="text-area">our purpose</h1>
+            <article class="cardtext">
+
+            </article>
+        </div>
+    </div>-->
+    <div class="separator">
+        <hr class="separator-line">
+    </div>
+    
+        <div class="image__container-abt">
+            <img src="images/R.jpeg" width='150px' height='200px' alt="Image" class="images__container-abt">
+        </div>
+       
+    
+    <div class="carousel-part">
+        <h2>OUR PARTNERS</h2>
+        <div class="carousel-track">
+            <!-- Add partner icons here -->
+            <div class="partner-icon"> <img src="images/th.jpeg" class="carousel-icon"></div>
+            <div class="partner-icon"><img src="images/th (1).jpeg" class="carousel-icon"></div>
+            <div class="partner-icon"><img src="images/th (2).jpeg" class="carousel-icon"></div>
+           <div class="partner-icon"><img src="images/OIP.jpeg" class="carousel-icon"></div>
+           <div class="partner-icon"><img src="images/t.jpeg" class="carousel-icon"></div>
+            <!-- Add more partner icons as needed -->
+        </div>
+    </div>
+    <footer>
+        <div class="row__footer">
+
+            <div class="col">
+                <img src="images/logo1.jpeg" class="logo__footer">
+                <p>Our mission is to offer our local and international guests with the best services they deserve at affordable costs.</p>
+            </div>
+            <div class="col">
+                <h3>Office
+                    <div class="underline"><span></span></div>
+                </h3>
+                <p>Kisumu-Busia Road</p>
+                <p>Maseno Kenya</p>
+                <p>Maseno,P.Box 1013,Kisumu </p>
+                <p class="email-id">lnwingsclub@gmail.com</p>
+                <h4>+254 - 0703 625 235</h4>
+            </div>
+            <div class="col">
+                <h3>links
+                    <div class="underline"><span></span></div>
+                </h3>
+                <ul>
+                    <li><a href="">home</a></li>
+                    <li><a href="">home</a></li>
+                    <li><a href="">home</a></li>
+                    <li><a href="">home</a></li>
+                    <li><a href="">home</a></li>
+                    <li><a href="">home</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Newsletter
+                    <div class="underline"><span></span></div>
+                </h3>
+                <form>
+                    <i class="far fa-envelope"></i>
+                    <input type="email" placeholder="Enter your email id" required>
+                    <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                </form>
+                <div class="social-icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fa fa-google" aria-hidden="true"></i>
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Design by TARDY © 2023- All Rights Reserved</p>
+    </footer>
+    <script src="js/index.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+</body>
+
+</html>
+
+
